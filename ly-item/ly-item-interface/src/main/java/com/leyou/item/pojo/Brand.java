@@ -1,5 +1,7 @@
 package com.leyou.item.pojo;
 
+import lombok.Data;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -10,6 +12,7 @@ import javax.persistence.Table;
  * @Date: 2019/7/16 16:28
  * @Description:
  */
+@Data
 @Table(name = "tb_brand")
 public class Brand {
     @Id
