@@ -17,6 +17,7 @@ zuul:
   retryable: true
   routes:
     item-service: /item/** # 将商品微服务映射到/item/**
+  ignored-services: upload-servie #忽略服务,文件上传不走zuul,避免因为文件上传造成的网络堵塞。
 ribbon:
   ConnectTimeout: 250 # 连接超时时间(ms)
   ReadTimeout: 2000 # 通信超时时间(ms)
