@@ -48,6 +48,7 @@ public class BrandService {
         return new PageResult<>(pageInfo.getTotal(), pageInfo);
     }
 
+
     @Transactional
     public void saveBrand(Brand brand, List<Long> cids) {
         // 新增品牌信息
@@ -57,6 +58,5 @@ public class BrandService {
             this.brandMapper.insertCategoryBrand(cid, brand.getId());
         }
     }
-
 
 }
